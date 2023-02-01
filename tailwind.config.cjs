@@ -5,7 +5,12 @@ module.exports = {
   theme: {
     extend: {},
   },
+//    corePlugins: {
+//     preflight: false,
+//   },
 
-  plugins: [],
+  plugins: [
+    require('@tailwindcss/typography')
+  ],
   darkMode: 'class'
 }
