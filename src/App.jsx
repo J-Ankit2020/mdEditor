@@ -1,19 +1,27 @@
-import './App.css'
+import React, {useState} from 'react'
+import {marked} from 'marked';
 import Header from './components/Header'
+import MarkDown from './components/MarkDown'
+import Preview from './components/Preview'
 
-import TextContainer from './components/TextContainer'
+
 
 function App() {
+    const [html, setHtml] = useState("");
+
+    const converter = (markdown) => {
+      setHtml(marked(markdown));
+    }
 
   return (
     <div className="App">
       <Header/>
       <div className='flex'>
-      <TextContainer isPreview={false}/>
-      <TextContainer isPreview={true}/>
+      <MarkDown converter={converter}/>
+      <Preview text = {html}/>
       </div>
     </div>
   )
 }
 
-export default App
+export default App;
