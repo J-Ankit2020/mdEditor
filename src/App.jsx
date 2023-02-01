@@ -1,7 +1,7 @@
 import React, {useState} from 'react'
 import {marked} from 'marked';
 import Header from './components/Header'
-import MarkDown from './components/MarkDown'
+import Markdown from './components/Markdown'
 import Preview from './components/Preview'
 
 
@@ -17,7 +17,7 @@ function App() {
     <div className="App">
       <Header/>
       <div className='flex'>
-      <MarkDown converter={converter}/>
+      <Markdown converter={converter}/>
       <Preview text = {html}/>
       </div>
     </div>
