@@ -5,9 +5,9 @@ const MarkDown = ({converter, setMD}) => {
     converter(e.target.value);
     setMD(e.target.value)
   }
-  useEffect(()=>{
-    converter(window.localStorage.getItem("rawMD"))
-  },[])
+  // useEffect(()=>{
+  //   converter(window.localStorage.getItem("rawMD"))
+  // },[])
   return (
     <div className = "w-1/2  bg-[#151619] text-white h-full mr-0.5">
     <Heading text='MARKDOWN'/>
